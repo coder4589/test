@@ -1,8 +1,8 @@
-
-
-<div id="ZoomDiv" style="position:fixed;"></div>
+<div id="ZoomDiv" style="position:fixed; top:0px; left:0px;"></div>
 
 <img id="ZoomImg_Inside" src="https://i.ytimg.com/vi/wB5h7VwW8GU/maxresdefault.jpg" width=200/>
+____________________________________________________________________________________________________________________________________________________________________________________
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.20/src/jquery.ez-plus.js"></script>
@@ -10,10 +10,25 @@
 <script>
 $('#ZoomImg_Inside').ezPlus({
 zoomWindowPosition: "ZoomDiv",
-zoomWindowWidth:window.innerWidth -25,
-zoomWindowHeight:window.innerHeight - 25,
+zoomWindowWidth:document.body.clientWidth,
+zoomWindowHeight:document.body.clientHeight,
+borderSize: 0,
 lensOpacity: 0,
 cursor:"none",
 scrollZoom: true,
 });
 </script>
+
+
+<!-- ___________________________ (Notes) ______________________________
+
+/* "document.body.clientWidth\Height" Seems to be more accurate */
+
+zoomWindowWidth:document.body.clientWidth,
+zoomWindowHeight:document.body.clientHeight,
+
+zoomWindowWidth:window.innerWidth,
+zoomWindowHeight:window.innerHeight,
+
+
+_____________________________ (Notes End) _____________________________ -->
