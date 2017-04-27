@@ -1,0 +1,19 @@
+
+
+<div id="ZoomDiv" style="position:fixed;"></div>
+
+<img id="ZoomImg_Inside" src="https://i.ytimg.com/vi/wB5h7VwW8GU/maxresdefault.jpg" width=200/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.20/src/jquery.ez-plus.js"></script>
+
+<script>
+$('#ZoomImg_Inside').ezPlus({
+zoomWindowPosition: "ZoomDiv",
+zoomWindowWidth:window.innerWidth -25,
+zoomWindowHeight:window.innerHeight - 25,
+lensOpacity: 0,
+cursor:"none",
+scrollZoom: true,
+});
+</script>
